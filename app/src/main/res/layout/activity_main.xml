@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="name"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName|textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:hint="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/nameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:hint="email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/phoneEditText"
+        app:layout_constraintTop_toBottomOf="@+id/phoneEditText" />
+
+    <EditText
+        android:id="@+id/streetEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPostalAddress|textCapWords"
+        android:imeOptions="actionNext"
+        android:hint="Street"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+    <EditText
+        android:id="@+id/cityEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPostalAddress|textCapWords"
+        android:imeOptions="actionNext"
+        android:hint="City"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/streetEditText"
+        app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+    <ImageView
+        android:id="@+id/contactImgView"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:onClick="imgClickHandler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityEditText"
+        tools:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <Button
+        android:id="@+id/saveContactButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="save"
+        android:onClick="saveContactButtonListener"
+        app:layout_constraintEnd_toEndOf="@+id/contactImgView"
+        app:layout_constraintStart_toStartOf="@+id/contactImgView"
+        app:layout_constraintTop_toBottomOf="@+id/contactImgView" />
+
+    <Button
+        android:id="@+id/buttonSaveWithImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save With Image"
+        android:onClick="buttonSaveWithImageListener"
+        app:layout_constraintEnd_toEndOf="@+id/saveContactButton"
+        app:layout_constraintStart_toStartOf="@+id/saveContactButton"
+        app:layout_constraintTop_toBottomOf="@+id/saveContactButton" />
+
+    <Button
+        android:id="@+id/displayContactsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="display Contacts"
+        android:onClick="displayContactButtonListener"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSaveWithImage"
+        app:layout_constraintStart_toStartOf="@+id/buttonSaveWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSaveWithImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
